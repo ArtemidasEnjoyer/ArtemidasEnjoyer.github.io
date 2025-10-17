@@ -1,0 +1,60 @@
+* {
+    font-family: Verdana;
+}
+
+body {
+    background: linear-gradient( teal, AliceBlue);
+    color: white;
+    text-align: center;
+    margin: 0px 20px 0px 20px;
+}
+
+img {
+    width: 100%;
+    display: block;
+    position: fixed;
+    top: 70px;
+    z-index: -1;
+    align-items: center;
+}
+
+a {
+    font-size: 130%;
+    padding: 30px;
+    color: white;
+}
+
+header {
+    background-color: rgba(160, 82, 45, 0.6);
+    padding: 10px;
+    margin-top: 100px;
+    border-radius: 15px 15px 0px 0px;
+}
+
+main {
+    background-color: sandybrown;
+    padding: 30px;
+}
+
+footer {
+    background-color: sienna;
+    padding: 30px;
+    border-radius: 0 0 15px 15px;
+}
+
+h1 {
+    text-shadow: 2px 2px 5px black;
+}
+
+table {
+    margin: auto;
+    width: 70%;
+    background-color: sienna;
+}
+
+table,
+thead,
+td{
+    border: solid 1px sandybrown;
+    border-collapse: collapse;
+}
