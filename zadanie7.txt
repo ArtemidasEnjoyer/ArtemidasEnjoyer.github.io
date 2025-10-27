@@ -73,18 +73,19 @@ GROUP BY klienci.id
 HAVING SUM(zamowienia.ilosc * produkty.cena) > 3000;
 
 -- Która kategoria produktów przyniosła najwyższy łączny przychód?
-SELECT SUM(produkty.cena), produkty.kategoria
+SELECT zamowienia.ilosc * produkty.cena, produkty.kategoria
 FROM produkty
+JOIN zamowienia ON zamowienia.produkt_id = produkty.id
 GROUP BY produkty.kategoria
-ORDER BY SUM(produkty.cena) DESC
+ORDER BY zamowienia.ilosc * produkty.cena DESC 
 LIMIT 1;
 
 -- Wyznacz produkt, który sprzedał się w największej liczbie sztuk.
-SELECT COUNT(zamowienia.ilosc),produkty.nazwa
+SELECT SUM(zamowienia.ilosc),produkty.nazwa
 FROM produkty
 JOIN zamowienia ON zamowienia.produkt_id = produkty.id
 GROUP BY produkty.nazwa
-ORDER BY COUNT(zamowienia.ilosc) DESC
+ORDER BY SUM(zamowienia.ilosc) DESC
 LIMIT 1;
 
 -- Oblicz średnią wartość pojedynczego zamówienia w całym sklepie.
