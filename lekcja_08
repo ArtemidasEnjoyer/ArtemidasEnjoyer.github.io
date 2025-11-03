@@ -1,0 +1,41 @@
+SELECT pracownik.NAZWISKO, pracownik.STANOWISKO, pracownik.ZATRUDNIONY, pracownik.PLACA_POD
+FROM pracownik
+WHERE pracownik.ODDZIAL_ID = 20 AND pracownik.ZATRUDNIONY <= '2018-01-01';
+
+SELECT *
+FROM (	SELECT NAZWISKO, STANOWISKO, ZATRUDNIONY, PLACA_POD
+		FROM pracownik
+		WHERE pracownik.ODDZIAL_ID = 20	) AS prac
+WHERE ZATRUDNIONY <= '2018-01-01';
+
+-- lista pracownikow nazwisko stanowisko placa pod
+SELECT pracownik.NAZWISKO,pracownik.STANOWISKO,pracownik.PLACA_POD, AVG(pracownik.PLACA_POD) as "Srednia wszystkick plac pod"
+FROM pracownik;
+
+SELECT 	pracownik.NAZWISKO,
+		pracownik.STANOWISKO,
+        pracownik.PLACA_POD,
+        (SELECT AVG(pracownik.PLACA_POD) FROM pracownik) AS "Średnia płaca",
+        pracownik.PLACA_POD * 100 / (SELECT AVG(pracownik.PLACA_POD) FROM pracownik) AS "% procent"
+FROM pracownik
+ORDER BY pracownik.PLACA_POD * 100 / (SELECT AVG(pracownik.PLACA_POD) FROM pracownik) ASC;
+
+SELECT 	pracownik.NAZWISKO,
+		pracownik.STANOWISKO,
+        pracownik.PLACA_POD,
+        (SELECT AVG(pracownik.PLACA_POD) FROM pracownik) AS "Średnia płaca",
+        pracownik.PLACA_POD * 100 / (SELECT AVG(pracownik.PLACA_POD) FROM pracownik) AS "% procent"
+FROM pracownik
+WHERE pracownik.PLACA_POD * 100 / (SELECT AVG(pracownik.PLACA_POD) FROM pracownik) > 100;
+
+SELECT *
+FROM pracownik
+WHERE pracownik.ODDZIAL_ID IN (20,30);
+
+SELECT 	pracownik.NAZWISKO,
+		pracownik.STANOWISKO,
+        pracownik.PLACA_POD,
+        (SELECT AVG(pracownik.PLACA_POD) FROM pracownik WHERE pracownik.ODDZIAL_ID IN (10)) AS "Średnia płaca",
+        pracownik.PLACA_POD * 100 / (SELECT AVG(pracownik.PLACA_POD) FROM pracownik WHERE pracownik.ODDZIAL_ID IN (10)) AS "% procent"
+FROM pracownik
+WHERE pracownik.ODDZIAL_ID IN (10);
