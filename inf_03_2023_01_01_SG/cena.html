@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styl_1.css">
+    <title>malarz</title>
+</head>
+<body>
+    <header><h1>Malowanie pokoi i biur</h1></header>
+    <main>
+        <section class="lewy">
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="mieszany.html">Mieszany</a></li>
+                <li><a href="cena.html">Wyceniamy</a></li>
+            </ul>
+        </section>
+        <section class="srodek">
+            <h2>Zapotrzebowanie na farbę</h2>
+                <label for="powierzchnia">Powierzchnia malowania (m<sup>2</sup>):</label>
+                <input type="number" name="powierzchnia" id="powierzchnia">
+                <input type="submit" name="submit" value="Policz" id="submit">
+                <p id="wynik"></p>
+        </section>
+        <section class="prawy">
+            <img src="obraz.png" alt="Próbki farb">
+        </section>
+    </main>
+    <footer>
+        <h3>MALARZ</h3>
+        <p>Stronę opracował: 000000000000</p>
+    </footer>
+    <script>
+        document.getElementById("submit").addEventListener("click", function() {
+            const wprPowierz = Number(document.getElementById("powierzchnia").value);
+            let ilFarby = wprPowierz / 4;
+            let puszki = Math.ceil(ilFarby);
+            const wynik = document.getElementById("wynik");
+            wynik.textContent = "Liczba potrzebnych puszek: " + puszki;
+        });  
+        </script>
+</body>
+</html>
