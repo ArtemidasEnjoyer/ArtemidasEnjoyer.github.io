@@ -1,1 +1,87 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Link Hub</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Roboto, sans-serif;
+            background: linear-gradient(135deg, #1f1f1f, #2e2e2e);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 90%;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 40px;
+            border-radius: 16px;
+            backdrop-filter: blur(8px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 0;
+            font-size: 2.2rem;
+            letter-spacing: 1px;
+            color: #f0f0f0;
+        }
+
+        .links {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        a.link {
+            display: block;
+            text-decoration: none;
+            color: #fff;
+            padding: 14px 20px;
+            border-radius: 10px;
+            background: rgba(255,255,255,0.08);
+            transition: 0.25s ease;
+            font-size: 1.05rem;
+            letter-spacing: 0.3px;
+        }
+
+        a.link:hover {
+            background: rgba(255,255,255,0.18);
+            transform: translateY(-2px);
+        }
+
+        footer {
+            margin-top: 35px;
+            font-size: 0.75rem;
+            color: #aaa;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Moje Linki</h1>
+
+        <div class="links">
+            <!-- WSTAW SWOJE LINKI TUTAJ -->
+            <a class="link" href="#">Przykładowy link 1</a>
+            <a class="link" href="#">Przykładowy link 2</a>
+            <a class="link" href="#">Przykładowy link 3</a>
+        </div>
+
+        <footer>
+            © 2025 • Twój Link Hub
+        </footer>
+    </div>
+</body>
+</html>
 
