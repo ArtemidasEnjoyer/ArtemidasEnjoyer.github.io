@@ -36,7 +36,21 @@ $polacz = mysqli_connect("localhost","root","","obuwie");
             <input type="number" name="liczba_par" class="kontrolki">
             <input type="submit" name="submit" value="Zamów" class="kontrolki">
         </form>
-        scrypt2
+        <?php
+        $zapytanie2 = "SELECT buty.model, buty.nazwa, buty.cena, produkt.nazwa_pliku FROM buty JOIN produkt ON buty.model = produkt.model;";
+        $wynik2 = mysqli_query($polacz,$zapytanie2);
+
+        while($w = mysqli_fetch_row($wynik2)) {
+            echo "
+            <article class='buty'>
+                <img src='$w[3]' alt='but męski'>
+                <h2>$w[1]</h2>
+                <h5>Model: $w[0]</h5>
+                <h4>Cena: $w[2]</h4>
+            </article>
+            ";
+        }
+        ?>
     </section>
     <footer>
         <p>Autor strony: 0000000000</p>
