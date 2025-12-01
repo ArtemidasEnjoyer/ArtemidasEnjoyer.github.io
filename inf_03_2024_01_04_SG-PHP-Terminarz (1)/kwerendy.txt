@@ -1,0 +1,8 @@
+-- zapytanie 1
+SELECT DISTINCT wpis
+FROM zadanis
+WHERE zadania.dataZadania BEETWIN "2020-07-01" AND "2020-07-07" AND zadania.wpis NOT NULL;
+
+-- zapytanie 2
+SELECT dataZadania, wpis
+FROM zadaia
