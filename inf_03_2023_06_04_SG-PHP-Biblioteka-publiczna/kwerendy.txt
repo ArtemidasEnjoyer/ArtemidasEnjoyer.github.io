@@ -1,0 +1,20 @@
+-- zapytanie 1
+SELECT imie, nazwisko
+FROM autorzy
+ORDER BY autorzy.nazwisko DESC;
+
+-- zapytanie 2
+INSERT INTO czytelnicy
+VALUES ("","Ewa","Kowalska","145321");
+
+-- zapytanie 3
+SELECT tytul
+FROM ksiazki
+JOIN kategoria ON ksiazki.id_kategoria = kategoria.id
+WHERE kategoria.nazwa = "dramat";
+
+-- zapytanie 4
+SELECT tytul
+FROM ksiazki
+JOIN wypozyczenia ON ksiazki.id = wypozyczenia.id_ksiazka
+WHERE id_czytelnik = 2;
