@@ -1,0 +1,16 @@
+-- zapytanie 1
+SELECT kod,nazwa,cena 
+FROM kursy
+ORDER BY cena ASC;
+
+-- zapytanie 2
+SELECT nazwa
+FROM kursy;
+
+-- zapytanie 3
+INSERT INTO uczestnicy 
+VALUES ("","Tadeusz","Wysocki","36");
+
+-- zapytanie 4
+SELECT kursy.nazwa, COUNT(szkolenieid_uczestnika)
+JOIN
