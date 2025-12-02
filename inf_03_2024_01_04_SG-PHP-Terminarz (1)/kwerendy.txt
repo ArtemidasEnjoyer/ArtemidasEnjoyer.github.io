@@ -1,8 +1,17 @@
 -- zapytanie 1
 SELECT DISTINCT wpis
-FROM zadanis
-WHERE zadania.dataZadania BEETWIN "2020-07-01" AND "2020-07-07" AND zadania.wpis NOT NULL;
+FROM zadania
+WHERE  zadania.wpis IS NOT NULL AND zadania.dataZadania BETWEEN "2020-07-01" AND "2020-07-07";
 
 -- zapytanie 2
 SELECT dataZadania, wpis
-FROM zadaia
+FROM zadania
+WHERE miesiac = "lipiec";
+
+-- zapytnaie 3
+SELECT miesiac, wpis
+FROM zadania
+WHERE wpis LIKE "S%";
+
+-- zapytanie 4
+UPDATE zadania SET wpis = "Wycieczka nad morze" WHERE dataZadania = "2020-07-18";
