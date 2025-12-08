@@ -12,5 +12,8 @@ INSERT INTO uczestnicy
 VALUES ("","Tadeusz","Wysocki","36");
 
 -- zapytanie 4
-SELECT kursy.nazwa, COUNT(szkolenieid_uczestnika)
-JOIN
+SELECT kursy.nazwa, COUNT(uczestnicy.id_uczestnika) AS "Zapisanych"
+FROM kursy
+JOIN kursy_uczestnicy ON kursy.kod = kursy_uczestnicy.kod_kursu
+JOIN uczestnicy ON uczestnicy.id_uczestnika = kursy_uczestnicy.id_uczestnika
+GROUP BY kursy.nazwa;
