@@ -1,0 +1,40 @@
+* {
+    font-family: Georgia;
+}
+
+.lewy,
+.srodkowy {
+    background-color: #3CB371;
+    color: white;
+    height: 100px;
+    width: 40%;
+    float: left;
+}   
+.prawy {
+    background-color: #3CB371;
+    height: 100px;
+    width: 20%;
+    float: left;
+}
+main {
+    clear: both;
+}
+section {
+    background-color: #FFDAB9;
+    width: 170px;
+    height: 90px;
+    margin: 5px;
+    border: 1px solid #3CB371;
+    float: left;
+}
+footer {
+    background-color: #3CB371;
+    color: white;
+    clear: both;
+}
+h6 {
+    text-align: right;
+}
+form {
+    margin: 30px;
+}
