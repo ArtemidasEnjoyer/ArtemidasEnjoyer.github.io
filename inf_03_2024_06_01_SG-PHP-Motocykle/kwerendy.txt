@@ -1,0 +1,16 @@
+-- zapytanie 1
+SELECT wycieczki.nazwa
+FROM wycieczki
+WHERE wycieczki.poczatek = 'Muszyna' OR wycieczki.poczatek = 'Wieliczka';
+
+-- zapytanie 2
+SELECT wycieczki.nazwa,wycieczki.opis,wycieczki.poczatek,zdjecia.zrodlo
+FROM wycieczki
+JOIN zdjecia ON zdjecia.id = wycieczki.zdjecia_id;
+
+-- zapytanie 3
+SELECT COUNT(wycieczki.id) AS 'ilosc_wycieczek'
+FROM wycieczki;
+
+-- zapytanie 4
+ALTER TABLE wycieczki ADD COLUMN ocena INT NOT NULL;
