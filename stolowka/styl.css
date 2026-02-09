@@ -1,0 +1,27 @@
+* {
+    font-family: Century,serif;
+}
+header {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+
+    gap: 10px;
+}
+.bannerimg {
+    display: inline-block;
+}
+header,
+footer {
+    background-color: #CCA10B;
+    color: white;
+    font-style: italic;
+    margin: 5px;
+    text-align: center;
+}
+.lewy,
+.prawy {
+
+}

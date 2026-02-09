@@ -1,0 +1,18 @@
+-- kwerenda 1
+SELECT imie,nazwisko,klasa
+FROM uczniowie
+WHERE klasa = '2B';
+-- kwerenda 2
+SELECT COUNT(*)-COUNT(id_alergii) AS 'uczniowie_bez_alergii',COUNT(id_alergii) AS 'uczniowie_z_alergia'
+FROM uczniowie;
+-- kwerenda 3
+SELECT DISTINCT imie,nazwisko,klasa
+FROM uczniowie
+JOIN zamowienia ON zamowienia.id_ucznia = uczniowie.id_ucznia
+JOIN posilki ON posilki.id_posilku = zamowienia.id_posilku
+WHERE posilki.wegetarianski = 1;
+-- kwerenda 4
+SELECT typy_posilkow.nazwa AS 'liczba posilkow',COUNT(posilki.id_posilku) AS 'ilosc_poslkow'
+FROM typy_posilkow
+JOIN posilki ON typy_posilkow.id_typu = posilki.id_typu
+GROUP BY typy_posilkow.nazwa;
