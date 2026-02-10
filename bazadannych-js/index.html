@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sklep</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <section id="formularz">
+
+            <label for="produkt">PRODUKT</label> 
+            <input type="text" id="produkt" name="produkt"> 
+            <label for="cena">CENA</label> 
+            <input type="number" name="cena" id="cena">  
+            <label for="ilosc">ILOŚĆ</label>
+            <input type="number" id="ilosc" name="ilosc"> 
+            <input type="submit" id="dodaj" value="DODAJ">
+ 
+        </section>
+        <section id="listazakupow">
+            <h1>LISTA ZAKUPÓW</h1>
+            <ol id="lista_prodoktow" type="I">
+            </ol>
+
+
+        </section>
+        <script src="./js/script.js"></script>
+    </main>
+</body>
+</html>
