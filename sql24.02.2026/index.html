@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie</title>
+    <link rel="stylesheet" href="./src/style.css">
+
+</head>
+<body>
+    <header>
+        <h1>Zmien widoczność obrazka</h1>
+    </header>
+    <main>
+        <section id="blok1">
+            <input type="range" id="rangeImg" min="0" max="100" value="100">
+            <img src="./src/obrazek.png" alt="przyroda" id="przyroda">
+            <div id="btn-box">
+                <input type="button" id="kolor" value="Kolorowy"><input type="button" id="czarnoBialy" Value="Czarno bialy">
+            </div>
+            </section>
+        <section id="blok2">
+            <img src="./src/brest.jpg" alt="brest" id="brest">
+            <div id="btn-box">
+                <input id="przyciskSep" type="button" value="">
+            </div>
+        </section>
+        <section id="blok3">
+            <img src="./src/kot.jpeg" alt="kot" id="kot">
+            <div id="btn-box">
+                <input type="button" id="pion" value="pion">
+                <input type="button" id="poziom" value="poziom">
+            </div>
+        </section>
+    </main>
+    <script src="./src/script.js"></script>
+</body>
+</html>
