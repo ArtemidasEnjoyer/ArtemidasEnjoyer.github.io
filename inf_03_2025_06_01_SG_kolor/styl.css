@@ -1,0 +1,60 @@
+* {
+    font-family: Garamond;
+    color: white;
+}
+header {
+    background-color: indigo;
+    text-align: center;
+    padding: 2px;
+}
+.blok-lewy,
+.blok-prawy {
+    background-color: indigo;
+    height: 600px;
+}
+.blok-srod {
+    background-color: black;
+    height: 600px;
+    overflow: auto;
+    scroll-behavior: auto;
+}
+footer {
+    background-color: indigo;
+    height: 150px;
+    clear: both;
+}
+.punkty {
+    background-color: tomato;
+    border-radius: 50%;
+    padding: 5px;
+    display: inline-block;
+}
+.gry {
+    padding: 3px;
+    text-align: center;
+    float: left;
+}
+li {
+    padding: 5px;
+}
+input {
+    margin: 10px;
+    color: indigo;
+}
+
+@media (min-width: 801px) {
+    .blok-lewy,
+    .blok-prawy {
+        width: 20%;
+        float: left;
+    }
+    .blok-srod {
+        width: 60%;
+        float: left;
+    }
+}
+@media (max-width: 800px) {
+    section {
+        width: 100%;
+    }
+}
