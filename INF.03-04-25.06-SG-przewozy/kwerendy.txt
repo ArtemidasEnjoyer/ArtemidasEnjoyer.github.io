@@ -1,0 +1,12 @@
+-- zapytanie 1
+SELECT id_zadania,zadanie, data
+FROM zadania;
+-- zapytanie 2
+INSERT INTO zadania (zadanie,data,osoba_id)
+VALUES ('spotkanie firmowe','2024-05-10','1'); 
+-- zapytanie 3
+DELETE FROM zadania WHERE id_zadania = 1; 
+-- zapytanie 4
+SELECT imie,nazwisko,telefon,zadania.zadanie,zadania.data
+FROM zadania
+JOIN osoby ON osoby.id_osoba = zadania.osoba_id;

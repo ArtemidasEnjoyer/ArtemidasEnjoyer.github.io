@@ -1,0 +1,50 @@
+body {
+    background-color: #FFCC99;
+    font-family: Garamond;
+    text-align: center;
+}
+header,
+footer {
+    background-color: darkgreen;
+    color: white;
+    padding: 30px;
+    font-size: 140%;
+}
+nav {
+    background-color: mediumseagreen;
+    word-spacing: 90px;
+    padding: 20px;
+}
+main {
+    display: flex;
+    flex-direction: row;
+}
+section {
+    width: 70%;
+    height: 500px;
+    display: block;
+}
+aside {
+    background-color: mediumseagreen;
+    width: 30%;
+    height: 500px;
+    text-align: left;
+}
+table {
+    border: solid 1px darkgreen;
+    margin: 30px auto 30px auto;
+}
+th,td {
+    padding: 5px;
+    animation: ease 0.3s;
+}
+a {
+    color: white;
+}
+ol {
+    list-style-type: circle;
+}
+th:hover,td:hover {
+    background-color: darkgreen;
+    color: white;
+}
