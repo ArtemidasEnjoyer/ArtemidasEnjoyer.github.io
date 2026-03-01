@@ -37,5 +37,7 @@ const pion = document.getElementById("pion");
 const poziom = document.getElementById("poziom");
 
 pion.addEventListener("click", function(){
+    console.log("pion") 
+    kotImg.style.transform = "translateY(100%)"
     
 })
