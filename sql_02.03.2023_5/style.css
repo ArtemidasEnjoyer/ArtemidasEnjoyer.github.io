@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Pixelify Sans", sans-serif;
+}
+body {
+    text-align: center;
+    background-color: alpha(aliceblue, 0.7);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+header {
+    font-weight: bold;
+    font-size: 400%;
+    background-color: aliceblue;
+    padding: 24px;
+}
+
+main {
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+table,
+tr,
+td,
+th {
+    border: 2px solid  #11111d;
+    color: #11111d;
+    text-align: center;
+    border-collapse: collapse;
+}
+table {
+    font-size: 200%;
+}
+th {
+    font-style: uppercase;
+    font-weight: bold;
+    word-spacing: 15px;
+    padding: 0px 25px 0px 25px;
+}
+
+
+a {
+    color: #1e1e2e;
+}
+section {
+    padding: 5% 0 5% 0;
+}
+tr,
+td{
+    transition-property: background-color;
+    transition-property: color;
+    transition-duration: 0.4s;
+}
+tr:hover,
+a:hover,
+th:hover,
+td:hover {
+    background-color: #181825;
+    color: aliceblue;
+}
+
+footer {
+    background-color: aliceblue;
+    font-size: 500%;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    color:#11111d;
+    background-color: aliceblue;
+    font-size: 300%;
+    width: 100%;
+}
+input[type="submit"]:hover {
+    background-color: #11111d;
+    color: aliceblue;
+}
