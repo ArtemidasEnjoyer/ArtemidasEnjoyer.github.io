@@ -36,14 +36,14 @@ if (!$connect) {
                 $iloscProduktu = $_POST['ilosc'];
                 $query = "INSERT INTO produkty (nazwa, cena, ilosc) VALUES ('$nazwaProduktu','$cenaProduktu','$iloscProduktu');";
                 mysqli_query($connect, $query);
-                
-                $query = "SELECT * FROM produkty;";
-                $result = mysqli_query($connect, $query);
-                while ($row = mysqli_fetch_row($result)) {
-                    echo "<li> Produkt: ".$row[1]."<br><hr> cena: ".$row[2]." -- ilość: ".$row[3]."<li>";
-                }
-
                 };
+            $query = "SELECT * FROM produkty;";
+            $result = mysqli_query($connect, $query);
+            while ($row = mysqli_fetch_row($result)) {
+                echo "<li> Produkt: ".$row[1]." -- cena: ".$row[2]." -- ilość: ".$row[3];
+                echo "<a href=del.php?usun=$row[0] id='button'>USUN</a>";
+                echo "</li>";
+            }
             ?>
             </ol>
 

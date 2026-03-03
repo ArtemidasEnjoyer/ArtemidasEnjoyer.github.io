@@ -56,3 +56,16 @@ main>section>ol {
 main>section>ol>li>hr {
     border-top: 3px dotted #1e1e2e;
 }
+
+#button {
+    background: none;
+    border: 2px solid #ffaa22;
+    color: #000;
+    padding: 4px 6px;
+    margin: 4px 6px;
+    display: inline-block;
+}
+#button:hover {
+    background-color: #000;
+    color: #ffaa22;
+}
