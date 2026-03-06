@@ -1,0 +1,24 @@
+-- kwerenda 1
+SELECT DISTINCT miejsca.nazwa
+FROM miejsca
+ORDER BY miejsca.nazwa ASC;
+-- kwerenda 2
+SELECT miejsca.cena
+FROM miejsca
+WHERE miejsca.nazwa = 'Malbork';
+-- kwerenda 3
+SELECT miejsca.nazwa,miejsca.cena,miejsca.link_obrazu 
+FROM miejsca
+WHERE miejsca.link_obrazu LIKE '0%';
+-- kwerenda 4
+SELECT DISTINCT miejsca.nazwa,ROUND(AVG(wycieczki.liczba_doroslych), 0) AS 'srednia_doroslych'
+FROM miejsca
+JOIN wycieczki ON miejsca.id_miejsca = wycieczki.id_miejsca
+GROUP BY miejsca.nazwa;
+-- kwerenda 5
+CREATE TABLE klienci (
+	id_klienta INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    imie VARCHAR(20),
+    nazwisko VARCHAR(40),
+    data_ur DATE
+)
