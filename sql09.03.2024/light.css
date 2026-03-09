@@ -1,0 +1,26 @@
+
+* {
+    background-color: antiquewhite;
+    color: #1e1e2e;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Comic Sans MS";
+    font-size: 200%;
+}
+section {
+    font-size: 200%;
+    float: right;
+}
+input {
+    font-family: "Comic Sans MS";
+    font-size: 200%;
+    border-radius: 100%;
+}
+input:hover {
+    background-color: #1e1e2e;
+    color: antiquewhite;
+}
