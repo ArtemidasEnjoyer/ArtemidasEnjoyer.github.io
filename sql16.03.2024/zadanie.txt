@@ -1,0 +1,7 @@
+Zadanie 
+Baza danych:
+02-part_02 -> 01-Zajecia_1 -> 00-db.sql
+
+1.pod przyciskiem  uruchamia się formularz (podstrona , odkrycie) dodawanie ocen dla ucznia o padanym id
+2. wszystkie ucznie ,wyświetlenie tabeli z imieniem i nazwiskiem ucznia i jego srednia wszystkich ocen
+3. styl css
