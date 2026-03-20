@@ -1,0 +1,15 @@
+-- kwerendy1
+SELECT kursy.kod,kursy.nazwa,kursy.cena
+FROM kursy 
+ORDER BY kursy.cena ASC;
+-- kwerenda2
+SELECT kursy.nazwa
+FROM kursy;
+-- kwerendy3
+INSERT INTO uczestnicy (imie,nazwisko,wiek)
+VALUES ('Tadeusz','Wysocki',36);
+-- kwerendy4
+SELECT kursy.nazwa,COUNT(kursy_uczestnicy.id_uczestnika) AS 'Zapisanych'
+FROM kursy
+JOIN kursy_uczestnicy ON kursy.kod = kursy_uczestnicy.kod_kursu
+GROUP BY kursy.nazwa;

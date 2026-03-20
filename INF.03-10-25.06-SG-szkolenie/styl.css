@@ -1,0 +1,49 @@
+body {
+    font-family: "Century Gothic",sans-serif;
+    text-align: center;
+    background-color: #FCE4EC;
+}
+header,
+footer {
+    background-color: #880E4F;
+    color: white;
+    padding: 10px;
+    letter-spacing: 20px;
+}
+main {
+    display: flex;
+    flex-direction: row;
+}
+.lewy {
+    width: 50%;
+    height: 600px;
+    overflow: auto;
+}
+.prawy {
+    background-color: #880E4F;
+    color: white;
+    width: 40%;
+    height: 500px;
+    margin: 35px;
+    box-shadow: 10px 10px 15px dimgray;
+}
+table {
+    margin: auto;
+    width: 70%;
+}
+input,
+button,
+select {
+    margin: 5px;
+    width: 70%;
+}
+tr:hover {
+    background-color: #F8BBD0;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    background-color: #880E4F;
+    justify-content: center;
+    align-items: center;
+}
