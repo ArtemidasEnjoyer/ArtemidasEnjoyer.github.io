@@ -1,0 +1,84 @@
+-- zadanie 1
+ALTER TABLE students
+ADD CONSTRAINT fk_classid
+FOREIGN KEY (class_id)
+REFERENCES classes(class_id);
+
+-- zadanie 2
+ALTER TABLE subjects
+DROP teacher_id,
+ADD COLUMN teacher_id INT NOT NULL,
+ADD CONSTRAINT fk_teachers
+FOREIGN KEY (teacher_id)
+REFERENCES teachers(teacher_id);
+
+-- zadanie 3
+ALTER TABLE grades 
+ADD CONSTRAINT fk_student
+FOREIGN KEY (student_id)
+REFERENCES students(student_id);
+
+-- zadanie 4
+ALTER TABLE grades 
+ADD CONSTRAINT fk_subject
+FOREIGN KEY (subject_id)
+REFERENCES subjects(subject_id);
+
+-- zadanie 5
+CREATE TABLE IF NOT EXISTS students_subjects 
+(
+    student_id INT NOT NULL,
+    subject_id INT NOT NULL,
+	PRIMARY KEY (student_id,subject_id),
+    CONSTRAINT fk_students_subjects_student
+    	FOREIGN KEY (student_id)
+    	REFERENCES students(student_id),
+    CONSTRAINT fk_students_subjects_subject
+    	FOREIGN KEY (subject_id)
+    	REFERENCES subjects(subject_id)
+);
+-- zadanie 5.5
+ALTER TABLE student_subjects 
+ADD CONSTRAINT fk_students_subjects_student
+	FOREIGN KEY (student_id)
+    REFERENCES students(student_id),
+ADD CONSTRAINT fk_students_subjects_subject
+    FOREIGN KEY (subject_id)
+    REFERENCES subjects(subject_id),
+ADD PRIMARY KEY (student_id,subject_id);
+
+-- zadanie 6
+ALTER TABLE grades
+ADD CHECK (grades.grade <=6 AND grades.grade >=1);
+
+-- zadanie 7
+CREATE TABLE student_profiles 
+(
+    student_id INT PRIMARY KEY,
+    adres VARCHAR(50),
+	miasto VARCHAR(30),
+	telefon VARCHAR(11),
+    CONSTRAINT fk_student_profile
+    	FOREIGN KEY (student_id)
+    	REFERENCES students(student_id)
+    	ON DELETE CASCADE
+    	ON UPDATE CASCADE
+);
+-- zadanie 8
+ALTER TABLE students
+	DROP CONSTRAINT fK_classid;
+
+ALTER TABLE students
+	ADD CONSTRAINT fk_classid
+	FOREIGN KEY (class_id)
+	REFERENCES classes(class_id)
+    ON DELETE SET NULL;
+
+-- zadanie 9
+ALTER TABLE grades 
+ADD COLUMN indeks BIGINT NOT NULL,
+ADD INDEX indeks_fast (indeks);
+
+-- zadanie 9.5
+ALTER TABLE grades
+ADD COLUMN indeks BIGINT NOT NULL UNION AUTO_INCREMENT;
