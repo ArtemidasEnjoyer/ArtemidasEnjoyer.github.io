@@ -1,0 +1,14 @@
+-- zapytanie 1
+SELECT nazwa,cena
+FROM towary
+LIMIT 4;
+-- zapytanie 2
+SELECT cena
+FROM towary
+WHERE nazwa = 'Ekierka';
+-- zapytanie 3
+UPDATE dostawcy SET dostawcy.nazwa = 'Atkykuly szkolne' WHERE id = 2  ;
+-- zapytanie 4
+SELECT promocja,COUNT(id) AS 'podsumowanie'
+FROM towary
+GROUP BY promocja;

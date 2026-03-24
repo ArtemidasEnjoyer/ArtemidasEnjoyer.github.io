@@ -1,0 +1,50 @@
+* {
+    font-family: Georgia;
+    text-align: center;
+}
+
+header,
+footer {
+    background-color: #4BA3C7;
+    color: white;
+    height: 80px;
+    font-size: 120%;
+}
+
+footer>h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.lewy,
+.prawy {
+    background-color: #EFEFEF;
+    height: 400px;
+    width: 25%;
+}
+.srod {
+    background-color: #90CAF9;
+    height: 400px;
+    width: 50%;
+}
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+table,
+tr,
+td {
+    margin: 10px;
+    width: 90%;
+    border: solid 1px #90CAF9;
+}
+tr:hover {
+    color: #90CAF9;
+}
+input {
+    margin: 15px 0px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
