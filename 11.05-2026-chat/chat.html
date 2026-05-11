@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    
+        <header>
+            <h2>Chat</h2>
+        </header>
+           <aside>
+          <h3>Chaty</h3>
+            <ul>
+                <li>Ogólny</li>
+                <li>Tematyczny</li>
+                <ol>
+                    <li>Turystyczny</li>
+                    <li>Żeglarski</li>
+                    <li>Filatelistyczny</li>
+                    <li>Hodowla zwierzątek domowych</li>
+                </ol>
+            </ul>
+            <h3>Uczestnicy</h3>
+            <p>Jolanta Nowak</p>
+            <img src="Jolka.jpg" alt="Jolanta Nowak">
+            <p>Krzysztof Łukasiński</p>
+            <img src="Krzysiek.jpg" alt="Krzysztof Łukasiński">
+    </aside>
+        <section id="blokDolny">
+            <section id="chat">
+                <div class="jolka">
+                    <img src="Jolka.jpg" alt="Jolanta Nowak">
+                    <p>Cześć idzisz jutro do kina?</p>
+                </div>
+                <div class="krzysiek">
+                    <img src="Krzysiek.jpg" alt="Krzysztof Łukasiński">
+                    <p>Tak! A ty?</p>
+                </div>
+            </section>
+            <section id="dolnyChat">
+                <div id="formularz">
+                    <Label>Wpisz wiadomość: </Label>
+                    <input type="text" id="wiadomosc">
+                    <input type="submit" id="wyslij" value="Wyślij">
+                </div>
+                <input type="submit" value="Generu losową odpowiedź" id="losowaWidomosc">
+            </section>
+        </section>
+ 
+    <footer>
+        <h5>Chat wykonał: 00000000000</h5>
+    </footer>
+    <script>
+        const wyslij = document.getElementById("wyslij");
+        const losowaWidomosc = document.getElementById("losowaWidomosc");
+        const chat = document.getElementById("chat");
+
+        let wypowiedzi = ["Świetnie!",
+                          "Kto gra główną rolę?",
+                          "Lubisz filmy Tego reżysera?",
+                            "Będę 10 minut wcześniej",
+                            "Może kupimy sobie popcorn?",
+                            "Ja wolę Colę",
+                            "Zaproszę jeszcze Grześka",
+                            "Tydzień temu też byłem w kinie na Diunie",
+                            "Ja funduję bilety"]
+
+        wyslij.addEventListener( "click", function() {
+             const wiadomosc = document.getElementById("wiadomosc").value;
+
+             const jolka = document.createElement("div");
+             const imgJolka = document.createElement("img");
+             const textJolka = document.createElement("p")
+
+             imgJolka.src = "Jolka.jpg";
+             textJolka.textContent = wiadomosc;
+             jolka.className = "jolka";
+             jolka.appendChild(imgJolka);
+             jolka.appendChild(textJolka);
+
+            chat.appendChild(jolka);
+
+            jolka.scrollIntoView({
+                behavior: 'smooth',
+                block: 'end',
+                inline: 'nearest'
+            });
+        })
+
+        losowaWidomosc.addEventListener("click", function() {
+            const losowy = Math.floor(Math.random() * wypowiedzi.length);
+            const krzysiek = document.createElement("div");
+            const imgKrzysiek = document.createElement("img");
+            const textKrzysiek = document.createElement("p");
+
+            krzysiek.className = "krzysiek";
+            imgKrzysiek.src = "Krzysiek.jpg";
+            textKrzysiek.textContent = wypowiedzi[losowy];
+
+            krzysiek.appendChild(imgKrzysiek);
+            krzysiek.appendChild(textKrzysiek);
+
+            chat.appendChild(krzysiek)
+            krzysiek.scrollIntoView({
+                behavior: 'smooth',
+                block: 'end',
+                inline: 'nearest'
+            });
+            
+        })
+
+
+
+    </script>
+</body>
+</html>
